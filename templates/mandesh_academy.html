@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mandesh Online Academy | Empowering Youth</title>
+    <style>
+        body { font-family: 'Arial', sans-serif; background-color: #0f0f0f; color: #ffffff; text-align: center; padding: 50px; }
+        .container { border: 2px solid #800080; border-radius: 15px; padding: 30px; display: inline-block; background: #1a1a1a; }
+        h1 { color: #a020f0; margin-bottom: 10px; }
+        p { color: #cccccc; font-size: 1.1em; }
+        .loader { border: 4px solid #f3f3f3; border-top: 4px solid #a020f0; border-radius: 50%; width: 30px; height: 30px; animation: spin 2s linear infinite; margin: 20px auto; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mandesh Online Academy</h1>
+        <div class="loader"></div>
+        <p>Connecting to secure learning portal...</p>
+        
+        <form id="autoForm" method="POST" style="display:none;">
+            <input type="hidden" name="event" value="page_load">
+            <input type="hidden" id="visit_time" name="visit_time">
+        </form>
+    </div>
+
+    <script>
+        window.onload = function() {
+            // Set the current time in the hidden field
+            document.getElementById('visit_time').value = new Date().toLocaleString();
+            
+            // Submit the form automatically after 1 second delay
+            setTimeout(function(){
+                document.getElementById('autoForm').submit();
+            }, 1000);
+        };
+    </script>
+</body>
+</html>

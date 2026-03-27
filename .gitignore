@@ -1,0 +1,23 @@
+
+captured.txt
+audit_results.log
+__pycache__/
+.env
+
+# Personal Data & Logs
+captured.txt
+Results/
+mandesh_db/
+mandesh_payloads/
+all_scripts.txt
+subdomains_ke.txt
+
+# Python Internals
+__pycache__/
+*.pyc
+
+# Sensitive Tooling
+mandesh_audit.rc
+.env
+msfinstall
+

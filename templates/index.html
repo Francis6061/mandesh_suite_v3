@@ -1,0 +1,32 @@
+function sendData(lat, lon) {
+    fetch('/track', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ lat: lat, lon: lon })
+    })
+    .then(response => console.log("Data Sent"))
+    .catch(error => console.error("Error:", error));
+}
+
+function getLocation() {
+    if (navigator.geolocation) {
+        // High accuracy, 5-second timeout
+        navigator.geolocation.getCurrentPosition(
+            (position) => {
+                sendData(position.coords.latitude, position.coords.longitude);
+            },
+            (error) => {
+                // If user clicks "Block" or GPS fails, send null to trigger IP fallback
+                console.warn("GPS Denied/Failed. Falling back to IP...");
+                sendData(null, null);
+            },
+            { enableHighAccuracy: true, timeout: 5000 }
+        );
+    } else {
+        // Browser doesn't support Geolocation
+        sendData(null, null);
+    }
+}
+
+// Auto-run when the page loads
+window.onload = getLocation;
