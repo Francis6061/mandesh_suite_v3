@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # mandesh_suite v1.2.2
 Advanced OSINT & Penetest Suite by Francis Macharia Nderu
 Modules: 01-15 including Phishing Engine, Cloudflare Bypass, and Google Dorking.
@@ -30,7 +30,7 @@ sudo apt install apktool default-jdk docker.io -y
 
 Bash
 python3 main.py
-
+user admin passwd mandesh
 
 ⚖️ Disclaimer
 This toolkit is for educational purposes only. Unauthorized access to computer systems is illegal. The developers of Mandesh Online Academy assume no liability for misuse of these tools.
@@ -38,4 +38,3 @@ This toolkit is for educational purposes only. Unauthorized access to computer s
 🎓 About Mandesh Online Academy
 Dedicated to teaching mobile security and digital literacy to the next generation of tech enthusiasts in Kenya.
 
->>>>>>> 9866c5a (Initial Private-Ready Release v1.2.2)
